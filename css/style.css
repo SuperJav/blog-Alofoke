@@ -1,0 +1,823 @@
+/*
+#C60002 rojo
+#FFFFFF blanco
+#C10808 rojo oscuro
+#505050 gris
+#000000 negro
+*/
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(180, 2, 2);
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: rgba(240, 248, 255, 0);
+    
+    
+}
+nav{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: end;
+    height: 100%;
+    
+}
+nav li{
+    cursor: pointer;
+    color: aliceblue;
+    list-style: none;
+    font-size: 1.5em;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    border-bottom: 2px solid red;
+    padding-left: 10px;
+}
+#container-menu{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 2em;
+    
+}
+#icon-menu{
+    display: none;
+}
+#container-logo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 18.5%;
+    margin-left: 3em;
+    margin-top: 10em;
+    margin-bottom: 15em;
+}
+#container-logo img{
+    width: 18em;
+    margin-left: 2em;
+    margin-bottom: -2em;
+}
+#container-logo #container-alofoke{
+    text-align: center;
+    font-size: 4em;
+    color: aliceblue;
+}
+#container-logo #container-alofoke h2{
+    padding: 0;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+#container-logo #container-radioShow{
+    text-align: center;
+    color: red;
+    padding-left: 3.6em;
+}
+#container-logo #container-radioShow h5{
+    font-size: 2em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: "New Amsterdam", sans-serif;
+    letter-spacing: 0.5em;
+}
+#container-main{
+    background-color:#FFFFFF;
+    transition: background-color 1s ease;
+    
+}
+.container-titulo-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#container-icon-sun{
+    padding-top: 15px;
+    display: flex;
+    justify-content: end;
+    padding-right: 50px;
+}
+#container-baground{
+
+    border: 2px inset #3A3A3A;
+    padding: 5px 3px;
+    width: 4em;
+    height: 1.5em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+#icon-luna{
+    margin-left: 0px;
+    transition: margin 1s ease;
+}
+
+#container-baground img{
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+.container-titulo-icon h3{
+    font-size: 4em;
+    text-transform:uppercase;
+    font-family: sans-serif;
+    color: #C10808;
+}
+.icon{
+    width: 10em;
+}
+.container-video{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: auto;
+    row-gap: 50px;
+    justify-items: center;
+    padding-bottom: 10em;
+    box-shadow: 3px 3px 10px 3px #dddddd2c;
+}
+.container-input-comentario-video{
+    background-color: #c1080800;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+    border-bottom: 1px solid red;
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.item-container-video{
+    border-radius: 1em 1em 0px 0px;
+    border-bottom: 5px double red;
+    
+    
+}
+
+.item-container-video iframe{
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: 14.5px -18px 10px 3px #dddddd;
+}
+.container-input-comentario-video input:focus{
+    outline: none;
+}
+.container-input-comentario-video input{
+    font-size: 1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    width: 100%;
+    border-right:0px;
+    border-color: #ffffff05;
+    
+}
+.container-input-comentario-video button{
+    border-left: 0px;
+    border-color: #ffffff05;
+    background-color: #8a151500;
+}
+.container-input-comentario-video button img{
+    width: 1.8em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+}
+.container-comentarios{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    font-family:  'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color:#888888;
+}
+.container-icon-video{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 1em;
+}
+.container-icon-video img{
+
+   margin-top: 0;
+   transition: margin 0.2s ease-in;
+   cursor: pointer;
+}
+.container-icon-video img:hover{
+    
+   margin-top: -1em;
+   border-bottom: 0.5px solid #505050;
+}
+.container-info-video{
+    min-height: 9em;
+}
+.container-anonimo{
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2em;
+    
+}
+.container-anonimo h4{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+
+}
+.container-anonimo p{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#888888;
+    letter-spacing: 2px;
+}
+#container-top-musica{
+    width: 80%;
+    margin-left: 190px;
+}
+#container-titulo-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+    box-shadow: -0.5px 10px 9.5px 1px #dddddd;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 0.5em;
+    margin-bottom: 30px;
+}
+#container-titulo-top div{
+    width: 50%;
+    font-family:  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.item-container-musica{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0em;
+    padding: 2px 0px;
+    border-radius: 5px;
+    box-shadow: -0.5px 10px 9.5px 1px #dddddd;
+    transition: padding 0.5s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    z-index: 4;
+    position: relative;
+    background-color: #dddddd;
+}
+.container-spotify{
+    z-index: 3;
+    position: relative;
+    top: -90px;
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.2s ease-in;
+
+}
+.container-spotify iframe{
+    height: auto;
+}
+.item-container-musica:hover{
+    padding: 8px 0px;
+}
+.item-container-musica .item-1,.item-2,.item-3,.item-4,.item-5{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-catalogo-musica{
+    width: 5em;
+
+}
+.container-img-top-musica{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+.container-nombre-top-cancion{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 50%;
+    text-align: start;
+    margin-left: 5px;
+}
+footer{
+    background-color: #2B2B2B;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+footer div{
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: #888888;
+}
+footer div h6{
+    font-size:0.8em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+footer div p{
+    font-size: 1.2em;
+}
+#container-sobre-mi{
+    background-color: aliceblue;
+    display: none;
+}
+.perfil-alofoke{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 3em;
+}
+.container-perfil-text{
+
+    text-align: justify;
+    width: 50%;
+}
+.container-perfil-text p{
+    font-size: 1.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px 20px;
+}
+.container-perfil-text h3{
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    text-shadow: #2B2B2B;
+}
+.img-perfil-alofoke{
+    border-radius: 50px 5px 50px 5px;
+    width: 40%;
+    margin: 3em;
+}
+.familiaaa{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 40%;
+}
+.familiaaa img{
+    width: 80%;
+}
+.container-radio img{
+    width: 100%;
+    border-radius: 15px 15px;
+}
+#container-emisoras{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 8em;
+
+}
+.item-container-emisora{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.logo-emisoras{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 100%;
+    
+}
+.container-emisora-logo-tex{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: -100px;
+    background-color: #3a3a3abd;
+    border-radius: 0px 0px 15px 15px;
+}
+.container-emisora-logo-tex div{
+    width: 90px;
+    display: flex;
+    margin-right: 1em;
+}
+.titulo-emisoras-item{
+    font-size: 1.5em;
+    font-family:sans-serif;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+.container-parrafo-emisora{
+    text-align: justify;
+    font-size: 1.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#contacto{
+   background-color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+}
+#container-form{
+    border-radius: 5px;
+    background-color: #dddddd;
+    display: flex;
+    padding-top: 0.5em;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    padding: 10px;
+    border: 5px double red;
+}
+#container-form h4{
+    font-family: "Jersey 25", sans-serif;
+    color: #d20404;
+    font-size: 2em;
+}
+#container-title-login{
+    width: 50%;
+    text-align: center;
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+.container-input label{
+    letter-spacing: 0.1em;
+    color: #C10808;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.container-input input{
+    font-size: 1em;
+    border-style: hidden;
+    border-radius: 1rem;
+    padding: 5px;
+    border-bottom-style:groove;
+    border-color: #C10808;
+    font-family: sans-serif;
+    font-weight: 600;
+    color:#C10808;
+    width: 15em;
+}
+textarea{
+    height: 5em;
+    font-size: 1em;
+    color:#C10808;
+    border-style: hidden;
+    border-radius: 1rem;
+    border-color: #C10808;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 5px;
+}
+.container-input button{
+    padding: 8px 20px;
+    border-radius: 30px;
+    border-color: #C10808;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 0.1em;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    margin-bottom: 2em;
+
+}
+.container-input button:hover{
+    letter-spacing: 0.2;
+    background-color:#C10808;
+    color: #43cea2;
+    box-shadow:#C10808 0px 7px 29px 0px;
+}
+.container-input button:active{
+    letter-spacing: 0.2;
+    background-color:black;
+    color: #43cea2;
+    box-shadow:black 0px 0px 0px 0px;
+    transform:  translateY(10px);
+    transition: 100ms;
+}
+
+
+#container-redes{
+    margin-top: 3em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#container-redes img{
+    width: 60%;
+}
+@media (max-width: 1794px) {
+    .container-video{
+        grid-template-columns: 1fr 1fr;
+    }
+    #container-top-musica{
+        margin-left: 100px;
+    }
+}
+@media (max-width: 1300px) {
+    nav{
+        width: 70%;
+    }
+    nav li{
+        font-size: 1em;
+    }
+    #container-logo{
+        width: 20.5%;
+    }
+    #container-logo img{
+        width: 12em;
+    }
+    #container-logo #container-alofoke{
+        font-size: 3em;
+    }
+    #container-logo #container-radioShow{
+        padding-left: 2.1em;
+    }
+    #container-logo #container-radioShow h5{
+        font-size: 1.5em;
+    }
+    .container-titulo-icon h3{
+        font-size: 3em;
+    }
+    .icon{
+        width: 8em;
+    }
+
+    .item-container-video iframe{
+        width: 400px;
+        height: 250px; 
+    }
+    #container-top-musica{
+        margin-left: 110px;
+    }
+    .img-catalogo-musica{
+        width: 3em;
+    }
+    #container-titulo-top{
+        font-size: 0.9em;
+    }
+    .item-container-musica{
+        font-size: 0.8em;
+    }
+    .perfil-alofoke{
+        flex-direction: column;
+    }
+    .container-perfil-text{
+        width: 80%;
+    }
+    .familiaaa{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap:wrap;
+        width: 80%;
+    }
+    .familiaaa img{
+        width: 40%;
+        margin: 1em;
+        text-align: center;
+    }
+   
+    #container-emisoras{
+        width: 80%;
+        grid-template-columns: 1fr;
+        margin-left: 8em;
+    }
+
+}
+@media (max-width: 930px) {
+    #container-logo{
+        margin-top: 3em;
+    }
+    #container-top-musica{
+        margin-left: 100px;
+    }
+    #container-top-musica{
+        margin-left: 90px;
+    }
+    #container-titulo-top{
+        font-size: 1em;
+    }
+    .item-container-musica{
+        font-size: 1em;
+    }
+    
+}
+@media (max-width: 850px) {
+    .container-video{
+        grid-template-columns: 1fr;
+    }
+    #container-main{
+        width: 90%;
+        margin-left: 50px;
+    }
+    #container-top-musica{
+        margin-left: 65px;
+    }
+    #container-top-musica{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .item-container-musica{
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 770px) {
+    nav{
+        width: 90%;
+    }
+    #container-logo{
+        margin-bottom: 8em;
+    }
+    #container-logo img{
+        width: 8em;
+        margin-bottom: -1em;
+    }
+    #container-logo #container-alofoke{
+        font-size: 1.9em;
+    }
+    #container-logo #container-radioShow{
+        padding-left: 1.3em;
+    }
+    #container-logo #container-radioShow h5{
+        font-size:1em;
+    }
+    .container-titulo-icon h3{
+        font-size: 2em;
+    }
+    .icon{
+        width: 7em;
+    }
+    #container-main{
+        margin-left: 40px;
+    }
+
+    .familiaaa img{
+        width: 100%;
+        margin: 1em;
+        text-align: center;
+    }
+    .img-perfil-alofoke{
+        border-radius: 50px;
+        width: 80%;
+    }
+    .container-perfil-text p{
+        font-size: 1em;
+    }
+    .container-perfil-text h3{
+        font-size: 1em;
+        letter-spacing: 0.2em;
+    }
+    .container-emisora-logo-tex{
+        justify-content: start;
+        align-items: center;
+        margin-top:-80px ;
+    }
+    
+    .titulo-emisoras-item{
+    font-size: 1em;
+    }
+    .logo-emisoras{
+        width: 80%; 
+    }
+    .container-parrafo-emisora{
+        font-size: 1em;
+    }
+    .item-container-emisora{
+        margin-bottom: 2em;
+    }
+    #container-emisoras{
+        margin-left: 3em;
+    }
+    #container-form{
+        width: 90%;
+    }
+    .container-input label{
+        letter-spacing: 0.1em;
+        font-size: 0.8em;
+  
+    }
+    #container-redes img{
+        width: 40%;
+        text-align: center;
+    }
+    #container-redes{
+        margin-top: 2em;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #container-redes a{
+        text-align: center;
+    }
+}
+@media (max-width: 550px) {
+    header{
+        height: auto;
+        
+    }
+    nav{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -3.8em;
+        height: 5em;
+        z-index: 1;
+        opacity: 0;
+        transition: top 2s ease,opacity 2s ease;
+        
+    }
+    nav li{
+        padding:  10px 0px;
+        width: 100%;
+        text-align: center;
+        
+    }
+    #container-menu{
+        z-index: 2;
+        width: 100%;
+        padding-right: 0px;
+    }
+    #icon-menu{
+        display: block;
+        margin-right: 0.5em;
+        width: 2.8em;
+    }
+    #container-nav{
+        width: 100%;
+    }
+    #container-logo{
+        margin-left: 1em;
+        margin-bottom: 5em;
+    }
+    #container-logo img{
+        width: 5em;
+        margin-bottom: -0.6em;
+        margin-left: 1.3em;
+    }
+    #container-logo #container-alofoke{
+        font-size: 1.4em;
+    }
+    #container-logo #container-radioShow{
+        padding-left: 0.7em;
+    }
+    #container-logo #container-radioShow h5{
+        font-size:0.8em;
+    }
+    
+    #container-main{
+        width: 100%;
+        margin-left: 0;
+    }
+    .container-titulo-icon h3{
+        font-size: 1.3em;
+    }
+    
+    .icon{
+        width: 5em;
+    }
+    .item-container-video iframe{
+        width: 300px;
+        height: 200px; 
+    }
+    #container-titulo-top{
+        font-size: 0.8em;
+    }
+    .item-container-musica{
+        font-size: 0.7em;
+    }
+    #container-emisoras{
+        margin-left: 1em;
+    }
+}
+

@@ -1,0 +1,66 @@
+
+
+let iconMenu=document.getElementById("icon-menu")
+let containerNav=document.getElementById("container-nav")
+let list=document.querySelectorAll("li")
+let containerMain=document.getElementById("container-main")
+let containerSobreMi=document.getElementById("container-sobre-mi")
+let containerContacto=document.getElementById("contacto")
+//containerMain.style.display="block"
+
+
+if (screen.width <= 550) {
+    containerNav.style.top="-3.8em"
+    containerNav.style.opacity="0"
+}
+function openMenu() {
+
+    if (containerNav.style.top === "-3.8em") {
+        containerNav.style.opacity="1"
+        containerNav.style.top="4.2em"
+        
+    }else{
+        containerNav.style.opacity="0"
+        containerNav.style.top="-3.8em"
+    }
+}
+
+iconMenu.addEventListener("click",openMenu)
+
+list[0].addEventListener("click",()=>{
+    if (containerMain.style.display=="none") {
+        
+        containerMain.style.display="block"
+         containerSobreMi.style.display="none"
+         containerContacto.style.display="none"
+    }else{
+        containerMain.style.display="none"
+    }
+})
+
+list[1].addEventListener("click",()=>{
+    if (containerSobreMi.style.display=="none") {
+
+        containerSobreMi.style.display="block"
+        containerMain.style.display="none"
+        containerContacto.style.display="none"
+    }else{
+        containerSobreMi.style.display="none"
+    }
+})
+
+list[2].addEventListener("click",()=>{
+    if (containerContacto.style.display=="none") {
+        containerContacto.style.display="flex"
+        containerMain.style.display="none"
+        containerSobreMi.style.display="none"
+    }else{
+        containerContacto.style.display="none"
+    }
+})
+
+let buttomLuna= document.querySelector("#icon-luna")
+let containerComentario=document.querySelectorAll(".container-comentarios")
+let containerTopMuscia=document.getElementById("container-titulo-top")
+
+
