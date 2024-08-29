@@ -33,8 +33,6 @@ list[0].addEventListener("click",()=>{
         containerMain.style.display="block"
          containerSobreMi.style.display="none"
          containerContacto.style.display="none"
-    }else{
-        containerMain.style.display="none"
     }
 })
 
@@ -44,8 +42,6 @@ list[1].addEventListener("click",()=>{
         containerSobreMi.style.display="block"
         containerMain.style.display="none"
         containerContacto.style.display="none"
-    }else{
-        containerSobreMi.style.display="none"
     }
 })
 
@@ -54,8 +50,6 @@ list[2].addEventListener("click",()=>{
         containerContacto.style.display="flex"
         containerMain.style.display="none"
         containerSobreMi.style.display="none"
-    }else{
-        containerContacto.style.display="none"
     }
 })
 
