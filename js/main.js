@@ -28,29 +28,23 @@ function openMenu() {
 iconMenu.addEventListener("click",openMenu)
 
 list[0].addEventListener("click",()=>{
-    if (containerMain.style.display=="none") {
-        
         containerMain.style.display="block"
          containerSobreMi.style.display="none"
          containerContacto.style.display="none"
-    }
+
 })
 
 list[1].addEventListener("click",()=>{
-    if (containerSobreMi.style.display=="none") {
-
         containerSobreMi.style.display="block"
         containerMain.style.display="none"
         containerContacto.style.display="none"
-    }
+    
 })
 
 list[2].addEventListener("click",()=>{
-    if (containerContacto.style.display=="none") {
         containerContacto.style.display="flex"
         containerMain.style.display="none"
         containerSobreMi.style.display="none"
-    }
 })
 
 let buttomLuna= document.querySelector("#icon-luna")
